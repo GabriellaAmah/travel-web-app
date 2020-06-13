@@ -1,0 +1,131 @@
+body{
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex !important;
+    justify-content: space-between;
+}
+
+
+header .headerText h1{
+  font-size: 2.4em;
+  position: relative;
+  bottom: 0.5em;
+  left: 0.5em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: linear-gradient( #cce6ff, #3399ff);
+   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header .headerText span{
+    font-size: 2.6em;
+}
+
+.body{
+    margin:0 2em;
+    padding-bottom: 2em
+}
+
+.image{
+    background-image: linear-gradient(rgba(0, 15, 200, 0.5), rgba(0, 15, 200, 0.5)), url('../image1.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image .imgText{
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+}
+
+.image button{
+    background-color: white;
+    height: 1.5em;
+    position: relative;
+    top:20rem;
+    font-size: 1;
+}
+
+.image button:nth-child(1){
+    left:1em
+}
+
+.image button:last-child{
+    right: 1em;
+}
+
+.card h2{
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 2em;
+}
+
+.card p{
+    letter-spacing: 1.5px;
+    padding-top: 1em;
+}
+
+.form{
+    margin-top: 2em;
+}
+
+.form .time{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2em;
+}
+
+.form .time .box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0.5em;
+}
+
+.form label{
+    letter-spacing: 1px;
+}
+
+.form .time button{
+    width: 5rem;
+    background: linear-gradient( #cce6ff, #3399ff); 
+    font-weight: bolder;
+    margin-top: 2em;
+}
+
+@media only screen and (min-width: 768px){
+    .body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .image{
+        min-height: 100vh;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+    .image{
+        min-height: 55vh !important;
+    }
+
+    .image button{
+        top: unset;
+        top: 12rem;
+    }
+
+    .navbar{
+        display: none !important;
+    }
+}
