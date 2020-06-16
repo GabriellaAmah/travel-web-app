@@ -32,7 +32,7 @@ header .headerText span{
 }
 
 .image{
-    background-image: linear-gradient(rgba(0, 15, 200, 0.5), rgba(0, 15, 200, 0.5)), url('../image1.jpg');
+    background-image: linear-gradient(rgba(0, 15, 200, 0.5), rgba(68, 74, 160, 0.5)), url('../images/image1.jpg');
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -123,6 +123,14 @@ header .headerText span{
     .image button{
         top: unset;
         top: 12rem;
+    }
+
+    .image button:nth-child(1){
+        left: unset;
+    }
+
+    .image button:last-child{
+        right: unset;
     }
 
     .navbar{
