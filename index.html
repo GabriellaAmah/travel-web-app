@@ -32,7 +32,8 @@
 
         <main>
             <div class=" body">
-                <div>
+
+                
                     <div class="imageArea">
                         <div class="image">
                           <button class="btn btn-group previous"> <i class="fas fa-chevron-left"></i></button>
@@ -43,38 +44,72 @@
                            <button class="btn btn-group next"> <i class="fas fa-chevron-right"></i></button>
                         </div>
                     </div>
-                </div>
+                
 
-                <div class="info container-fluid">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2 class="text-center text-capitalize">weather analysis</h2>
-                            <p>dear esteemed customer in order to serve you better,
-                                we now provide weather analysis on your desired location
-                            </p>
-
-                            <div class="form">
-                               <div class="cityInput">
-                                    <label form-check-label>destination</label>
-                                    <input type="text" placeholder="enter location">
-                               </div>
-                                <div class="time">
-                                    <label class= "form-check-label">when do you intend to go ?</label>
-                                    <div class="box">
-                                       <label class= "form-check-label">today</label> <input type="radio" name="time"> 
-                                       <label class= "form-check-label">tomorrow</label><input type="radio" name="time"> 
-                                      <label class= "form-check-label">this week</label><input type="radio" name="time"> 
-                                     <label class= "form-check-label">not sure but this year</label><input type="radio" name="time">
-
-
-                                        <button class="btn btn-group btn-primary">submit</button>
-
+                <div class="mainArea">
+                   
+                    <div class="info container-fluid" >
+                        <div class="card">
+                            <div class="errorMessage" hidden>
+                                <p>please fill in the details appropiately</p>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="text-center text-capitalize">weather analysis</h2>
+                                <p>dear esteemed customer in order to serve you better,
+                                    we now provide weather analysis on your desired location
+                                </p>
+    
+                               
+                                <div>
+                                    <div class="form">
+                                        <form class="myform">
+                                            <div class="cityInput">
+                                                <label form-check-label>destination</label>
+                                                <input type="text" class="destination" placeholder="enter location">
+                                            </div>
+                                          
+                                            <div class="time">
+                                                 <p>when do you intend to go ?</p>
+                                                 <div class="box">
+                                                    <label class= "form-check-label" for="today">today</label>
+                                                    <input id="today" type="radio" name="time" value="today"> 
+             
+                                                   <label class= "form-check-label" for="week">this week</label>
+                                                    <input id="week" type="radio" name="time" value="week"> 
+             
+                                                    
+                                                 </div>
+                                                     
+                                                </div>
+                                       </form>
+                                       <button type="submit" class="btn btn-group btn-primary" id="submit">submit</button>
                                     </div>
-                                        
+                                
+                               
+    
+                            </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result container-fluid" hidden>
+                        <div class="card">
+                            <button class="btn btn-group exit"><i class="fas fa-times icon"></i></button>
+                            <div class="card-body">
+                                <div class="textArea">
+                                    <h2>weather condition of <span class="selected-city">italy</span></h2>
+                                    <p>the weather temperature is : <span class="temp">0</span><sup>o</sup>C</p>
+                                </div>
+                    
+                                <div>
+                                    <img class="img-fluid cityImg" src = "">
                                 </div>
                             </div>
                         </div>
                     </div>
+
+               
                 </div>
             </div>
         </main>
@@ -82,3 +117,6 @@
         <script src = "../main.js"></script>
     </body>
 </html>
+
+
+
