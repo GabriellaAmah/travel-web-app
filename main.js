@@ -20,17 +20,6 @@ let cities = [
 
 let index = 0;
 
-function random(){
-  for(let i = 0; i < cities.length; I++){
-    let random = Math.floor(Math.random() * cities.length);
-
-    image.style.backgroundImage =`linear-gradient(rgba(0, 15, 200, 0.5), rgba(68, 74, 160, 0.5)), ${cities[random].url}`, 
-    header.textContent = cities[random].h1
-  }
-}
-
-setInterval(random, 2000)
-
 
 
 next.addEventListener('click', function(){
@@ -154,6 +143,8 @@ exit.addEventListener('click', ()=>{
   destination.value = ""
   this_week.checked = false
   today.checked = false
+  document.querySelector('.cityImg').src = "";
+  document.querySelector('.temp').innerHTML = '<p>0<sup>o</sup> C</p>'
 })
 
 
