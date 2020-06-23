@@ -60,7 +60,7 @@ function getData(){
  getPic()
 
   selectedCity.textContent = destination.value;
-  let postal = `https://api.geonames.org/searchJSON?q=${destination.value}&username=gabbieamah`;
+  let postal = `https://api.geonames.org/searchJSON?q=${destination.value}&username=gabbieAmah`;
   async function get_destination(){
    let res = await fetch(postal);
    let data = await res.json();
@@ -111,7 +111,7 @@ submitButton.addEventListener('click', () => {
     getPic()
 
  
-    let postal = `https://api.geonames.org/searchJSON?q=${destination.value}&username=gabbieamah`
+    let postal = `https://api.geonames.org/searchJSON?q=${destination.value}&username=gabbieAmah`
 
     async function get_destination(){
       let res = await fetch(postal);
