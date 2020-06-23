@@ -144,7 +144,7 @@ exit.addEventListener('click', ()=>{
   this_week.checked = false
   today.checked = false
   document.querySelector('.cityImg').src = "";
-  document.querySelector('.temp').innerHTML = '<p>0<sup>o</sup> C</p>'
+  document.querySelector('.temp').innerHTML = '<p>0<sup>o</sup>C</p>'
 })
 
 
