@@ -48,6 +48,8 @@ previous.addEventListener('click', () => {
 
 function getData(){
 
+  selectedCity.textContent = destination.value
+
   let picUrl = `https://pixabay.com/api/?key=13730652-d9e6835610cb9bb9525b4a5c6&q=${destination.value}&category=travel&image_type=photo&pretty=true`;
  
 
@@ -59,8 +61,8 @@ function getData(){
 
  getPic()
 
-  selectedCity.textContent = destination.value;
-  let postal = `https://api.geonames.org/searchJSON?q=${destination.value}&username=gabbieAmah`;
+
+  let postal = `http://api.geonames.org/searchJSON?q=${destination.value}&username=gabbieamah`;
   async function get_destination(){
    let res = await fetch(postal);
    let data = await res.json();
@@ -111,7 +113,7 @@ submitButton.addEventListener('click', () => {
     getPic()
 
  
-    let postal = `https://api.geonames.org/searchJSON?q=${destination.value}&username=gabbieAmah`
+    let postal = `http://api.geonames.org/searchJSON?q=${destination.value}&username=gabbieamah`
 
     async function get_destination(){
       let res = await fetch(postal);
