@@ -62,14 +62,16 @@ function getData(){
  getPic()
 
 
-  let postal = `http://api.geonames.org/searchJSON?q=${destination.value}&username=gabbieamah`;
+  let postal = `https://eu1.locationiq.com/v1/search.php?key=cd8f8eb8677331&country=${destination.value}&format=json`;
   async function get_destination(){
    let res = await fetch(postal);
    let data = await res.json();
+
+   console.log(data)
  
-   let lat = data.geonames[0].lat
-   let lng =  data.geonames[0].lng
-   let weatherbit =  `https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lng}&country=${destination.value},NC&key=cb0cb1c78a97487ba286dfdedfcfdb28`;
+   let lat = data[0].lat
+   let lon =  data[0].lon
+   let weatherbit =  `https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&country=${destination.value},NC&key=cb0cb1c78a97487ba286dfdedfcfdb28`;
  
    fetch(weatherbit)
    .then((req) => req.json())
@@ -113,16 +115,16 @@ submitButton.addEventListener('click', () => {
     getPic()
 
  
-    let postal = `http://api.geonames.org/searchJSON?q=${destination.value}&username=gabbieamah`
+    let postal = `https://eu1.locationiq.com/v1/search.php?key=cd8f8eb8677331&country=${destination.value}&format=json`
 
     async function get_destination(){
       let res = await fetch(postal);
       let data = await res.json();
     
-      let lat = data.geonames[0].lat
-      let lng =  data.geonames[0].lng
+      let lat = data[0].lat
+      let lon =  data[0].log
 
-      let weatherbit =  `https://api.weatherbit.io/v2.0/forecast/daily?lat=${lat}&lon=${lng}&country=${destination.value},NC&key=cb0cb1c78a97487ba286dfdedfcfdb28`;
+      let weatherbit =  `https://api.weatherbit.io/v2.0/forecast/daily?lat=${lat}&lon=${lon}&country=${destination.value},NC&key=cb0cb1c78a97487ba286dfdedfcfdb28`;
 
 
       fetch(weatherbit)
