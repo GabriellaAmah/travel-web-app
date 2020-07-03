@@ -122,7 +122,7 @@ submitButton.addEventListener('click', () => {
       let data = await res.json();
     
       let lat = data[0].lat
-      let lon =  data[0].log
+      let lon =  data[0].lon
 
       let weatherbit =  `https://api.weatherbit.io/v2.0/forecast/daily?lat=${lat}&lon=${lon}&country=${destination.value},NC&key=cb0cb1c78a97487ba286dfdedfcfdb28`;
 
