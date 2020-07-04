@@ -1,3 +1,5 @@
+//DOM 
+
 let next = document.querySelector('.next');
 let previous = document.querySelector('.previous');
 let image = document.querySelector('.image')
@@ -10,6 +12,8 @@ let exit = document.querySelector('.exit');
 let today = document.querySelector('#today');
 let this_week = document.querySelector('#week')
 
+// an array consiting of images and their headers
+
 let cities = [
     {url : "url('../images/image3.jpg')", h1: 'explore the madives' },
     {url : "url('../images/image4.jpg')", h1: 'experience cairo' },
@@ -17,6 +21,8 @@ let cities = [
     {url : "url('../images/image2.jpg')", h1: 'resurrect your taste buds' },
     {url : "url('../images/image6.jpg')", h1: 'explore the philipines' }
 ]
+
+// event listeners to handle the button controlling the images
 
 let index = 0;
 
