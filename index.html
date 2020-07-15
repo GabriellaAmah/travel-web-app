@@ -10,6 +10,7 @@
     </head>
     <body>
         <header>
+
              <div class="headerText">
                  <h1><span>e</span>xplore</h1>
                     </div>
@@ -74,9 +75,19 @@
                                                     <label class= "form-check-label" for="today">today</label>
                                                     <input id="today" type="radio" name="time" value="today"> 
              
-                                                   <label class= "form-check-label" for="week">this week</label>
-                                                    <input id="week" type="radio" name="time" value="week"> 
-             
+                                                    <label class= "form-check-label" for="week">tommorow</label>
+                                                    <input id="tomorrow" type="radio" name="time" value="tommorow"> 
+
+                                                    <label class= "form-check-label" for="week">this week</label>
+                                                    <input id="current_week" type="radio" name="time" value="this week"> 
+
+                                                    <label hidden class= "form-check-label" for="week">next week</label>
+                                                    <input hidden id="next_week" type="radio" name="time" value="next week"> 
+                                                    
+                                                    <!--
+                                                    <label class="form-check-label" for="date">date</label>
+                                                    <input id="date-input" type="text" name="date-text" placeholder="YY-MM-DD">
+                                                    -->
                                                     
                                                  </div>
                                                      
@@ -99,11 +110,70 @@
                             <div class="card-body">
                                 <div class="textArea">
                                     <h2>weather condition of <span class="selected-city">italy</span></h2>
-                                    <p>the weather temperature is : <span class="temp">0</span><sup>o</sup>C</p>
+                                    <p class="weather-text">the weather temperature is : <span class="temp">0</span><sup>o</sup>C</p>
+                                </div>
+
+                                <div class="this-week">
+                                    <div class="monday row" hidden>
+                                        <div class="col">
+                                            <p>wed</p>
+                                            <span class="wed"></span><span><sup>o</sup>C</span>
+                                        </div>
+                                        <div class="col">
+                                            <p>thurs</p>
+                                            <span class="thurs"></span><span><sup>o</sup>C</span>
+                                        </div>
+                                        <div class="col">
+                                            <p>fri</p>
+                                            <span class="fri"></span><span><sup>o</sup>C</span>
+                                        </div>
+                                        <div class="col">
+                                            <p>sat</p>
+                                            <span class="sat"></span><span><sup>o</sup>C</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tuesday row" hidden>
+                                        <div class="col">
+                                            <p>thurs</p>
+                                            <span class="thurs"></span><span><sup>o</sup>C</span>
+                                        </div>
+                                        <div class="col">
+                                            <p>fri</p>
+                                            <span class="fri"></span><span><sup>o</sup>C</span>
+                                        </div>
+                                        <div class="col">
+                                            <p>sat</p>
+                                            <span class="sat"></span><span><sup>o</sup>C</span>
+                                        </div>
+                                    </div>
+                                    <div class="wednesday row" hidden>
+                                        <div class="col">
+                                            <p>fri</p>
+                                            <span class="fri"></span><span><sup>o</sup>C</span>
+                                        </div>
+                                        <div class="col">
+                                            <p>sat</p>
+                                            <span><span class="sat"></span> <sup>o</sup>C</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="thursday row" hidden>
+                                    
+                                        <div class="col">
+                                            <p>sat</p>
+                                            <span class="sat"></span><span><sup>o</sup>C</span>
+                                        </div>
+                                        <div class="col">
+                                            <p>sun</p>
+                                            <span class="sun"></span><span><sup>o</sup>C</span>
+                                        </div>
+                                    </div>
                                 </div>
                     
                                 <div>
                                     <img class="img-fluid cityImg" src = "">
+                                    <figcaption class="caption text-center"></figcaption>
                                 </div>
                             </div>
                         </div>
